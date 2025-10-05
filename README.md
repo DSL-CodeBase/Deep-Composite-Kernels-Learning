@@ -21,7 +21,7 @@ This project implements a Deep Regularized Kernel Learning (DRKL) method based o
 │   └── data_loader.py             # Data loader
 ├── run_image/                     # Image dataset experiments
 │   ├── train_image_composite_kernels.py  # Image training script
-│   ├── motal_image.py             # Image model implementation
+│   ├── model_image.py             # Image model implementation
 │   └── data_loader_image.py      # Image data loader
 └── README.md                      # Project documentation
 ```
@@ -148,4 +148,5 @@ For questions or suggestions, please contact:
 - **v1.1.0**: Added multi-GPU support and image dataset experiments
 
 - **v1.2.0**: Optimized numerical stability and training efficiency
+
 
