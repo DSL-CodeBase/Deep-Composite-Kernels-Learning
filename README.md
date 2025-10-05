@@ -132,18 +132,6 @@ The model achieves excellent performance on multiple datasets:
 3. **Extensibility**: Modular design, easy to extend with new kernel functions and loss functions
 4. **Experiment-friendly**: Supports multiple running modes and parameter configurations
 
-## Citation
-
-If you use this project, please cite the related paper:
-
-```bibtex
-@article{deep_composite_kernels,
-  title={Deep Composite Kernels Learning via Regularized Fisher Discrepancy},
-  author={Your Name},
-  journal={Journal Name},
-  year={2024}
-}
-```
 
 ## License
 
@@ -160,3 +148,4 @@ For questions or suggestions, please contact:
 - **v1.1.0**: Added multi-GPU support and image dataset experiments
 
 - **v1.2.0**: Optimized numerical stability and training efficiency
+
