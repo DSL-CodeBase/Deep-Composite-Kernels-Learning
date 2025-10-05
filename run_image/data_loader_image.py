@@ -1,13 +1,11 @@
 """
-载入图像数据集
-支持: cifar10, cifar100, celeba, mnist, fashion_mnist, imagenet, svhn
-
+Load image datasets
+Supports: cifar10, cifar100, mnist, fashion_mnist, svhn, stl10
 """
 from torchvision import datasets, transforms
 import torch
 
 def cifar10_data():
-    # 数据预处理
     transform_train = transforms.Compose([
         transforms.RandomCrop(32, padding=4),
         transforms.RandomHorizontalFlip(),
@@ -20,9 +18,7 @@ def cifar10_data():
         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))
     ])
     
-    # 加载CIFAR10数据集
     train_dataset = datasets.CIFAR10(root='./data', train=True, download=True, transform=transform_train)
-    
     test_dataset = datasets.CIFAR10(root='./data', train=False,download=True, transform=transform_test)
     
     return train_dataset, test_dataset
@@ -50,7 +46,6 @@ def mnist_data():
     return train_dataset, test_dataset
 
 def cifar100_data():
-    # 数据预处理
     transform_train = transforms.Compose([
         transforms.RandomCrop(32, padding=4),
         transforms.RandomHorizontalFlip(),
@@ -63,7 +58,6 @@ def cifar100_data():
         transforms.Normalize((0.5071, 0.4867, 0.4408), (0.2675, 0.2565, 0.2761))
     ])
     
-    # 加载CIFAR100数据集
     train_dataset = datasets.CIFAR100(root='./data', train=True, download=True, transform=transform_train)
     test_dataset = datasets.CIFAR100(root='./data', train=False, download=True, transform=transform_test)
     
@@ -72,7 +66,6 @@ def cifar100_data():
 
 
 def svhn_data():
-    # Data loading and preprocessing
     transform_train = transforms.Compose([
         transforms.RandomCrop(32, padding=4),
         transforms.RandomHorizontalFlip(),
@@ -85,7 +78,6 @@ def svhn_data():
         transforms.Normalize((0.4377, 0.4438, 0.4728), (0.1980, 0.2010, 0.1970))
     ])
     
-    # 加载SVHN数据集
     train_dataset = datasets.SVHN(root='./data', split='train', download=True, transform=transform_train)
     test_dataset = datasets.SVHN(root='./data', split='test', download=True, transform=transform_test)
     
@@ -93,7 +85,6 @@ def svhn_data():
 
 
 def stl10_data():
-    # 数据预处理 - STL-10图像是96x96像素
     transform_train = transforms.Compose([
         transforms.RandomCrop(96, padding=4),
         transforms.RandomHorizontalFlip(),
@@ -106,7 +97,6 @@ def stl10_data():
         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))
     ])
     
-    # 加载STL-10数据集
     train_dataset = datasets.STL10(root='./data', split='train', download=True, transform=transform_train)
     test_dataset = datasets.STL10(root='./data', split='test', download=True, transform=transform_test)
     
