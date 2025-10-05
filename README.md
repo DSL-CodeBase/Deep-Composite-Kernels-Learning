@@ -152,11 +152,11 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## Contact
 
 For questions or suggestions, please contact:
-- Email: your.email@example.com
-- GitHub Issues: [Project Issues Page]
+- Email: dsl_code@outlook.com
 
 ## Changelog
 
 - **v1.0.0**: Initial version with basic deep composite kernel learning
 - **v1.1.0**: Added multi-GPU support and image dataset experiments
+
 - **v1.2.0**: Optimized numerical stability and training efficiency
